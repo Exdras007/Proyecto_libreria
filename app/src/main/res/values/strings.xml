@@ -7,5 +7,12 @@
     <string name="comics">comics</string>
     <string name="del_reader">DEL READER</string>
     <string name="KelRed">KelRed</string>
+    <string name="imagen_de_los_libros_a_mostrar">Imagen de los libros a mostrar</string>
+    <string name="titulo">Titulo</string>
+    <string name="autor">Autor</string>
+    <string name="id">ID</string>
+    <string name="numero_de_p_ginas">Numero de páginas:</string>
+    <string name="_0_0">0.0</string>
+    <string name="_000">000</string>
     KelRed
 </resources>

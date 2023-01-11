@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Proyecto_libreria</string>
+    <string name="e_reader_app">E-Reader App</string>
+    <string name="libros">libros</string>
+    <string name="inicio">inicio</string>
+    <string name="ajustes">ajustes</string>
+    <string name="comics">comics</string>
+    <string name="del_reader">DEL READER</string>
+    <string name="KelRed">KelRed</string>
+    KelRed
+</resources>

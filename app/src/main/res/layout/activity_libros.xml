@@ -76,5 +76,28 @@
                 android:textColor="#000000" />
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/titulo_oredenarPorAutor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/ordenar_libros_por_autor"
+            android:textColor="#000000"
+            android:textStyle="bold|italic" />
+
+        <Spinner
+            android:id="@+id/sp_autores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="585dp"
+            android:background="#61CEFF" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

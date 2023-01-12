@@ -1,9 +1,7 @@
 package com.example.proyecto_libreria.modelo;
 
 import android.util.Log;
-
 import com.example.proyecto_libreria.clases.Libro;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -33,6 +31,8 @@ public class libreriaDB
                 String autor = resultado.getString("Autor");
                 int num_paginas = resultado.getInt("Num_Paginas");
                 Double precio = resultado.getDouble("Precio");
+                Libro elLibro = new Libro(id_libro, nombre, autor, num_paginas, precio);
+                libros.add(elLibro);
             }
             resultado.close();
             sentencia.close();

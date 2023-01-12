@@ -1,8 +1,8 @@
-package com.example.proyecto_libreria;
+package com.example.proyecto_libreria.clases;
 
 import java.util.Objects;
 
-public class Libro
+public class Comic
 {
     //Atributos
     private String ID;
@@ -11,7 +11,7 @@ public class Libro
     private int paginas;
     private double precio;
 
-    public Libro(String ID, String nombre, String autor, int paginas, double precio) {
+    public Comic(String ID, String nombre, String autor, int paginas, double precio) {
         this.ID = ID;
         Nombre = nombre;
         Autor = autor;
@@ -19,7 +19,7 @@ public class Libro
         this.precio = precio;
     }
 
-    public Libro()
+    public Comic()
     {
         this.ID = "000_000";
         Nombre = "nada";
@@ -72,8 +72,8 @@ public class Libro
     public boolean equals(Object o)
     {
         if (this == o) return true;
-        if (!(o instanceof Libro)) return false;
-        Libro libro = (Libro) o;
+        if (!(o instanceof Comic)) return false;
+        Comic libro = (Comic) o;
         return ID.equals(libro.ID);
     }
 

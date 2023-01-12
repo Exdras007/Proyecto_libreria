@@ -1,27 +1,22 @@
 package com.example.proyecto_libreria;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity
+public class activity_libros extends AppCompatActivity
 {
-    private RecyclerView rv_libros;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_libros);
     }
 
-    public void ir_libros(View view)
+    public void ir_inicio(View view)
     {
-        Intent intent = new Intent(this, activity_libros.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

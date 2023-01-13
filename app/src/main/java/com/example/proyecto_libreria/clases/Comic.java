@@ -81,4 +81,15 @@ public class Comic
     public int hashCode() {
         return Objects.hash(ID);
     }
+
+    @Override
+    public String toString() {
+        return "Comic{" +
+                "ID='" + ID + '\'' +
+                ", Nombre='" + Nombre + '\'' +
+                ", Autor='" + Autor + '\'' +
+                ", paginas=" + paginas +
+                ", precio=" + precio +
+                '}';
+    }
 }

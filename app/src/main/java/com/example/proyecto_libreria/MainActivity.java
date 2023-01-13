@@ -7,6 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.proyecto_libreria.clases.Libro;
+import com.example.proyecto_libreria.modelo.libreriaDB;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity
 {
     private RecyclerView rv_libros;
@@ -17,6 +22,10 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ArrayList<Libro> libros_devueltos_1 = libreriaDB.obtenerLibros();
+
+
     }
 
     public void ir_libros(View view)

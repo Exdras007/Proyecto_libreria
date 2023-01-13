@@ -95,9 +95,11 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_libros"
             android:layout_width="match_parent"
-            android:layout_height="585dp"
-            android:background="#61CEFF" />
+            android:layout_height="match_parent"
+            android:background="#61CEFF"
+            tools:itemCount="15" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

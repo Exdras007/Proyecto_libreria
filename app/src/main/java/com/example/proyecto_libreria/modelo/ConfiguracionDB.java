@@ -29,8 +29,7 @@ public class ConfiguracionDB
             return conexion;
         }
         catch (SQLException e)
-        {
-            e.printStackTrace();
+        {e.printStackTrace();
             System.out.println("No se pudo establecer la conexion con la base de datos");
             return null;
         }

@@ -1,8 +1,9 @@
 package com.example.proyecto_libreria.clases;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Libro
+public class Libro implements Serializable
 {
     //Atributos
     private String ID;
@@ -80,5 +81,16 @@ public class Libro
     @Override
     public int hashCode() {
         return Objects.hash(ID);
+    }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "ID='" + ID + '\'' +
+                ", Nombre='" + Nombre + '\'' +
+                ", Autor='" + Autor + '\'' +
+                ", paginas=" + paginas +
+                ", precio=" + precio +
+                '}';
     }
 }

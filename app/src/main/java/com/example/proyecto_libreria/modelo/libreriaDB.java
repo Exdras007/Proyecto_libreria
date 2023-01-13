@@ -4,6 +4,7 @@ import android.util.Log;
 import com.example.proyecto_libreria.clases.Comic;
 import com.example.proyecto_libreria.clases.Libro;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -48,6 +49,42 @@ public class libreriaDB
         }
     }
 
+    public static boolean insertarLibro(Libro l)
+    {
+        Connection conexion = ConfiguracionDB.conectarBaseDeDatos();
+        if(conexion == null)
+        {
+            return false;
+        }
+        try
+        {
+            String ordensql = "INSERT INTO libros (ID_Libro, Nombre, Autor, Num_Paginas, Precio) VALUES (?,?,?,?,?);";
+            PreparedStatement sentencia = conexion.prepareStatement(ordensql);
+
+            sentencia.setString(1, l.getID());
+            sentencia.setString(2, l.getNombre());
+            sentencia.setString(3, l.getAutor());
+            sentencia.setString(4, String.valueOf(l.getPaginas()));
+            sentencia.setString(5, String.valueOf(l.getPrecio()));
+
+            int filasAfectadas = sentencia.executeUpdate();
+            sentencia.close();
+            conexion.close();
+            if(filasAfectadas > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        catch (SQLException e)
+        {
+            return false;
+        }
+    }
+
     public static ArrayList<Comic> obtenerComics()
     {
         Connection conexion = ConfiguracionDB.conectarBaseDeDatos();
@@ -84,4 +121,5 @@ public class libreriaDB
             return comics;
         }
     }
+
 }
